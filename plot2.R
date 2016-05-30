@@ -10,7 +10,7 @@ subdata <- subset(data, Date1 >= '2007-02-01' & Date1 <= '2007-02-02')
 subdata$timestamp <- paste(subdata$Date, subdata$Time)
 subdata$timestamp1 <- as.POSIXct(strptime(subdata$timestamp, "%d/%m/%Y %H:%M:%S"))
 #
-# Draw plot1
+# Draw plot2
 #
 plot(subdata$timestamp1,subdata$Global_active_power,xlab="",ylab="Global Active Power(kilowatts)",type="l")
 dev.copy(png,"plot2.png")
